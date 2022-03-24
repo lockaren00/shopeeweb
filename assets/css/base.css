@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #EE4D2D;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --start-gold-color: #ffce3e;
+
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-search-height: 40px;
+    --header-search-select-height: 24px;
+    --header-sort-bar-height: 46px;
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* common */
+.mt-20 {
+    margin-top: 20px;
+}
+
+.border-top {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Button */
+.btn {
+    padding: 10px 12px;
+    min-width: 122px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: var(--white-color);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn--back {
+    margin-right: 8px;
+}
+
+.btn--back:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn--viewed {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn--size-s {
+    padding: 8px;
+}
+
+.auth-form__social--facebook {
+    background-color: #3a5a98;
+    color: var(--white-color);
+}
+
+.auth-form__social--google {
+    background-color: var(--white-color);
+    color: #666;
+}
+
+.auth-form__social--facebook,
+.auth-form__social--google {
+    display: flex;
+    align-items: center;
+}
+
+/* Panigation */
+.panigation {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.panigation__item + .panigation__item {
+    margin-left: 30px;
+}
+
+.panigation__item--active .panigation__link {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.panigation__link {
+    text-decoration: none;
+    height: 30px;
+    width: 40px;
+    font-size: 2rem;
+    color: #757575;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panigation__icon {
+    color: #b1b1b1;
+}
+
+.panigation__icon--active {
+    color: #bf523d;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
